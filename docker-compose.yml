@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    container_name: ted-daytrade-bot
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=sqlite:////app/data/bot.db
+    volumes:
+      - ./data:/app/data
