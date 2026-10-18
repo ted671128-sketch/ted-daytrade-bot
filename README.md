@@ -1,0 +1,1 @@
+# ted-daytrade-bot
